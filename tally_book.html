@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+		<script src="jzb.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				background: -webkit-linear-gradient(left, #2A84A6,#329BB0); /* Safari 5.1 - 6.0 */
+				background: -o-linear-gradient(right , #50A7B0, #86AAA8); /* Opera 11.1 - 12.0 */
+				/*background: -moz-linear-gradient( right, #50A7B0); /* Firefox 3.6 - 15 */
+				/*background: linear-gradient(right, #86AAA8); /* 标准的语法 */
+				color: #FFFFF0;
+				font-size: 2rem;
+				font-family: "微软雅黑";
+			}
+			.buttom{
+				width: 100%;
+				height: 5rem;
+				position: fixed;
+				bottom: 0;
+				display: flex;
+				justify-content: space-around;
+				
+			}.buttom a{
+				text-decoration: none;
+				width: 50%;
+				text-align: center;
+				background-color:darkorchid;
+				background: rgba(1,2,3,0.5);
+				border-radius: .5rem;
+				color: #FFFFF0;
+				font-size: 2rem;
+				line-height: 5rem;
+			}
+			
+		</style>
+	</head>
+	<body ng-app="myapp">
+		
+		<div ng-view></div>
+		<div class="buttom">
+			<!--<a href="#/">记账</a>
+			<a href="#/detail.html">账单流水</a>-->
+			<a href="#/index1">记账</a>
+			<a href="#/detail1">账单流水</a>
+		</div>
+	</body>
+	<!--<script type="text/javascript">
+		
+	</script>-->
+</html>

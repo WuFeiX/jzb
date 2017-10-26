@@ -1,0 +1,44 @@
+<div class="container-fluid"  ng-controller="tjsj">
+			<div class="row-fluid">
+				<div class="span12">
+					<h2 class="text-center" >
+						记 账 本
+					</h2>
+					<form>
+						<fieldset>
+							 <legend style="color: #FFFFFF;">账单明细</legend> 
+							 <p><label>类别：</label> <input type="text" ng-model="title" class="form-control" placeholder="餐费/出游/酒店"/></p>
+							 <p><label>花费：</label> <input type="number" ng-model="content" class="form-control" placeholder="元"/> </p>
+							 <p><label>日期：</label> <input type="date" id="birthday" class="form-control" ng-model="time" /> </p>
+							
+							 <button type="submit"  ng-click="add()" class="btn" style="background:darkturquoise;">添加</button>
+							 <button type="submit"  ng-click="bc()" class="btn" style="background:darkturquoise;">保存</button>
+							 <!--<form class="form-search">
+							 	<input class="input-medium search-query" type="text" />
+							 	<button class="btn" contenteditable="true" type="submit">查找</button>
+							 </form>-->
+						</fieldset>
+					</form>
+					
+					<table class="table">
+						<thead>
+							<tr>
+								<th>类别</th>
+								<th>金额</th>
+								<th>日期</th>
+								<th>操作</th>
+							</tr>
+							
+						</thead>
+						<tbody>
+							<tr ng-repeat="v in zhi">
+								<td>{{v.title}}</td>
+								<td>{{v.content}}</td>
+								<td>{{v.time | date : 'yyyy-MM-dd'}}</td>
+								<td><button ng-click="del($index)" class="btn" style="background:darkturquoise;">删除</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>	

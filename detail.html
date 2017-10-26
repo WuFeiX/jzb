@@ -1,0 +1,30 @@
+<div class="container-fluid"  ng-controller="tjsj">
+			<div class="row-fluid">
+				<div class="span12">
+					<h2 class="text-center" >
+						记 账 本
+					</h2>
+					
+					
+					<table class="table">
+						<thead>
+							<tr>
+								<th>类别</th>
+								<th>金额</th>
+								<th>日期</th>
+								<th>操作</th>
+							</tr>
+							
+						</thead>
+						<tbody>
+							<tr ng-repeat="v in zhi">
+								<td>{{v.title}}</td>
+								<td>{{v.content}}</td>
+								<td>{{v.time | date : 'yyyy-MM-dd'}}</td>
+								<td><button ng-click="del($index)" class="btn" style="background:darkturquoise;">删除</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>	
